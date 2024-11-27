@@ -1,1 +1,24 @@
-<svg id="logosandtypes_com" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150.2"><path d="M0 .2h150v150H0V.2z" fill="none"/><g><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-767.4316" y1="221.8463" x2="-767.0396" y2="221.8463" gradientTransform="translate(186859.2188 -53990.2383) scale(243.45)"><stop offset="0" stop-color="#00aae7"/><stop offset=".2" stop-color="#00aae7"/><stop offset=".67" stop-color="#006098"/><stop offset=".9" stop-color="#00467f"/><stop offset="1" stop-color="#00467f"/></linearGradient><path d="M65.3 30.6c20.8 3.2 33.7.7 33.7.7s-3-10.9-11.6-11c-7.8 0-15.5-.5-23.2-1.4-29-4.4-36.5-14.7-36.5-14.7 1.7 11.4 19 23.6 37.6 26.4z" fill="url(#a)"/><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="-767.4316" y1="222.1336" x2="-767.0396" y2="222.1336" gradientTransform="translate(186859.2188 -53990.2383) scale(243.45)"><stop offset="0" stop-color="#00aae7"/><stop offset=".2" stop-color="#00aae7"/><stop offset=".67" stop-color="#006098"/><stop offset=".9" stop-color="#00467f"/><stop offset="1" stop-color="#00467f"/></linearGradient><path d="M96.4 64.3c0-2.8 0-5.7-.1-8.3l22.7-7.7c2.9-1 4.7-2.6 4.7-5.3v-2.8C111.4 40 67 38.5 67 38.5c4.2 6.6 8.4 17.8 8.4 30.5 0 30.8-13.4 53.6-30.8 68.8 29.4-6.1 51.8-38.6 51.8-73.5z" fill="url(#b)"/></g></svg>
+<svg id="logosandtypes_com" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150.2" class="w-32 h-32">
+  <path d="M0 .2h150v150H0V.2z" fill="none"/>
+  <g>
+    <!-- Smooth Gradient for the Top Shape -->
+    <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-767.4316" y1="221.8463" x2="-767.0396" y2="221.8463" gradientTransform="translate(186859.2188 -53990.2383) scale(243.45)">
+      <stop offset="0" stop-color="#00aae7"/>
+      <stop offset="0.2" stop-color="#00aae7"/>
+      <stop offset="0.67" stop-color="#006098"/>
+      <stop offset="0.9" stop-color="#00467f"/>
+      <stop offset="1" stop-color="#00467f"/>
+    </linearGradient>
+    <path d="M65.3 30.6c20.8 3.2 33.7.7 33.7.7s-3-10.9-11.6-11c-7.8 0-15.5-.5-23.2-1.4-29-4.4-36.5-14.7-36.5-14.7 1.7 11.4 19 23.6 37.6 26.4z" fill="url(#a)" opacity="0.9"/>
+    
+    <!-- Smooth Gradient for the Bottom Shape with a Subtle Glow Effect -->
+    <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="-767.4316" y1="222.1336" x2="-767.0396" y2="222.1336" gradientTransform="translate(186859.2188 -53990.2383) scale(243.45)">
+      <stop offset="0" stop-color="#00aae7"/>
+      <stop offset="0.2" stop-color="#00aae7"/>
+      <stop offset="0.67" stop-color="#006098"/>
+      <stop offset="0.9" stop-color="#00467f"/>
+      <stop offset="1" stop-color="#00467f"/>
+    </linearGradient>
+    <path d="M96.4 64.3c0-2.8 0-5.7-.1-8.3l22.7-7.7c2.9-1 4.7-2.6 4.7-5.3v-2.8C111.4 40 67 38.5 67 38.5c4.2 6.6 8.4 17.8 8.4 30.5 0 30.8-13.4 53.6-30.8 68.8 29.4-6.1 51.8-38.6 51.8-73.5z" fill="url(#b)" opacity="0.85"/>
+  </g>
+</svg>
