@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 #wrapper-canvas canvas {
   max-width: 100%;
 }
@@ -21,4 +24,388 @@
 
 .swiper-pagination-bullet {
   background-color: #23b9eb;
+}
+
+/* Main Section Styling */
+#main-section {
+  position: relative;
+  background: #f4f4f4;
+}
+
+/* Container Styling */
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: scale(0.8);
+  visibility: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+  color: #111;
+  position: absolute;
+  top: -616px;
+  z-index: 100;
+  left: 157px;
+
+  /* Border Animation */
+  border: 2px solid transparent; /* Transparent border as base */
+  border-image: linear-gradient(
+    45deg,
+    #e74c3c,
+    #8e44ad,
+    #3498db,
+    #2ecc71,
+    #f1c40f
+  );
+  border-image-slice: 1;
+  animation: borderColorAnimation 3s infinite;
+}
+
+/* Keyframes for Border Animation */
+@keyframes borderColorAnimation {
+  0% {
+    border-image-source: linear-gradient(
+      45deg,
+      #e74c3c,
+      #8e44ad,
+      #3498db,
+      #2ecc71,
+      #f1c40f
+    );
+  }
+  25% {
+    border-image-source: linear-gradient(
+      45deg,
+      #3498db,
+      #2ecc71,
+      #f1c40f,
+      #e74c3c,
+      #8e44ad
+    );
+  }
+  50% {
+    border-image-source: linear-gradient(
+      45deg,
+      #2ecc71,
+      #f1c40f,
+      #e74c3c,
+      #8e44ad,
+      #3498db
+    );
+  }
+  75% {
+    border-image-source: linear-gradient(
+      45deg,
+      #f1c40f,
+      #e74c3c,
+      #8e44ad,
+      #3498db,
+      #2ecc71
+    );
+  }
+  100% {
+    border-image-source: linear-gradient(
+      45deg,
+      #e74c3c,
+      #8e44ad,
+      #3498db,
+      #2ecc71,
+      #f1c40f
+    );
+  }
+}
+
+#container.show {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
+#container.hide {
+  opacity: 0;
+  transform: scale(0.8);
+  visibility: hidden;
+}
+
+/* About Section Styling */
+#about-section {
+  padding: 40px;
+  background-color: #f9f9f9;
+  flex: 1;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slideUp 1s forwards;
+}
+
+#about-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#about-subtitle,
+#about-description,
+#about-note {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+#skills-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+}
+
+.skill p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Contact Section Styling */
+#contact-section {
+  padding: 40px;
+  background-color: #121212;
+  color: #fff;
+  flex: 1;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slideDown 1s forwards;
+}
+
+#contact-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#contact-subtitle {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#label-name,
+#label-email,
+#label-message {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+#input-name,
+#input-email,
+#textarea-message {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: #111;
+  color: #fff;
+  border-bottom: 2px solid red;
+}
+
+#textarea-message {
+  resize: none;
+  height: 100px;
+}
+
+#send-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #e74c3c;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+  background-color: #c0392b;
+}
+
+/* Close Icon */
+#close-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s;
+}
+
+#close-icon:hover {
+  color: #e74c3c;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* General Reset for Responsiveness */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  #container {
+    width: 95%;
+    left: 10px; /* Centering for smaller screens */
+    top: -500px; /* Adjust top positioning */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #about-section,
+  #contact-section {
+    padding: 30px;
+  }
+
+  #about-title,
+  #contact-title {
+    font-size: 1.8rem;
+  }
+
+  #about-subtitle,
+  #about-description,
+  #about-note,
+  #contact-subtitle {
+    font-size: 0.9rem;
+  }
+
+  #skills-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skill img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    left: 0;
+    top: -646px;
+  }
+
+  #about-section,
+  #contact-section {
+    padding: 20px;
+  }
+
+  #about-title,
+  #contact-title {
+    font-size: 1.5rem;
+  }
+
+  #about-subtitle,
+  #about-description,
+  #about-note,
+  #contact-subtitle {
+    font-size: 0.85rem;
+  }
+
+  #input-name,
+  #input-email,
+  #textarea-message {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  #send-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #container {
+    padding: 10px;
+  }
+
+  #close-icon {
+    font-size: 1.2rem;
+  }
+
+  #about-title,
+  #contact-title {
+    font-size: 1.2rem;
+  }
+
+  #skills-container {
+    align-items: center;
+  }
+
+  .skill img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skill p {
+    font-size: 0.75rem;
+  }
+
+  #input-name,
+  #input-email,
+  #textarea-message {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  #send-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
 }
