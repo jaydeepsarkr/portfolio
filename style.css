@@ -439,9 +439,9 @@ html {
   transition: transform 0.3s ease;
 }
 
-.tooltip-icon:hover img {
+/* .tooltip-icon:hover img {
   transform: rotate(10deg) scale(1.1);
-}
+} */
 
 .tooltip {
   font-size: 14px;
@@ -599,11 +599,11 @@ html {
 }
 
 .express {
-  color: #333;
+  color: #df9494;
 }
 
 .express .tooltip {
-  background: linear-gradient(135deg, #333, #555);
+  background: linear-gradient(135deg, #df9494, #fff);
 }
 
 .node {
