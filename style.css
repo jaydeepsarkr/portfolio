@@ -159,12 +159,12 @@ html {
   font-weight: bold;
 }
 
-#skills-container {
+/* #skills-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
-}
+} */
 
 .skill img {
   width: 50px;
@@ -282,14 +282,7 @@ html {
     transform: translateY(0);
   }
 }
-/* General Reset for Responsiveness */
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Responsive Design */
 @media screen and (max-width: 1200px) {
   #container {
     width: 95%;
@@ -343,6 +336,7 @@ body {
   #about-section,
   #contact-section {
     padding: 20px;
+    width: 100%;
   }
 
   #about-title,
@@ -377,6 +371,8 @@ body {
 
   #close-icon {
     font-size: 1.2rem;
+    color: black;
+    top: -493px;
   }
 
   #about-title,
@@ -407,5 +403,238 @@ body {
   #send-button {
     font-size: 0.8rem;
     padding: 6px 12px;
+  }
+}
+.tooltip-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 700;
+  cursor: default;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tooltip-icon:hover {
+  transform: scale(1.1);
+}
+
+.mongodb {
+  color: #47a248;
+}
+
+.react {
+  color: #61dafb;
+}
+
+.node {
+  color: #8cc84b;
+}
+
+.tooltip-icon img {
+  position: relative;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.tooltip-icon:hover img {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.tooltip {
+  font-size: 14px;
+  color: black;
+  position: absolute;
+  top: 16px;
+  border-radius: 24px;
+  padding: 10px 16px;
+  opacity: 0;
+  margin-left: -5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: top 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    opacity 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: translateY(10px);
+  text-align: center;
+}
+
+.tooltip-icon:hover .tooltip {
+  top: -56px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tooltip span {
+  position: relative;
+  z-index: 1;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  transform: rotate(45deg) translateX(-50%);
+  left: 50%;
+  bottom: -12px;
+  background-color: inherit;
+}
+
+.mongodb .tooltip {
+  background: linear-gradient(135deg, #47a248, #69b864);
+  color: white;
+}
+
+.express .tooltip {
+  background: linear-gradient(135deg, #f5f5f5, #eaeaea);
+  color: #333;
+}
+
+.react .tooltip {
+  background: linear-gradient(135deg, #61dafb, #85e0fc);
+  color: #0d1117;
+}
+
+.node .tooltip {
+  background: linear-gradient(135deg, #8cc84b, #a4d65a);
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .tooltip-icon {
+    font-size: 28px;
+    gap: 12px;
+  }
+
+  .tooltip {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+/* Skills Container */
+#skills-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #1e2a38, #2c3e50);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual Skill */
+.skill {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Tooltip Icon */
+.tooltip-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 700;
+  cursor: default;
+  position: relative;
+  color: white;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tooltip-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 4px 10px rgba(255, 255, 255, 0.6));
+}
+
+/* Tooltip */
+.tooltip {
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 16px;
+  border-radius: 24px;
+  padding: 10px 16px;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  transition: top 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    opacity 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55), transform 0.35s ease;
+  transform: translateY(10px);
+}
+
+.tooltip-icon:hover .tooltip {
+  top: -56px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tooltip Arrow */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background-color: inherit;
+  transform: rotate(45deg);
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* Color Themes */
+.vue {
+  color: #42b883;
+}
+
+.vue .tooltip {
+  background: linear-gradient(135deg, #42b883, #2c9676);
+}
+
+.express {
+  color: #333;
+}
+
+.express .tooltip {
+  background: linear-gradient(135deg, #333, #555);
+}
+
+.node {
+  color: #8cc84b;
+}
+
+.node .tooltip {
+  background: linear-gradient(135deg, #8cc84b, #5ba844);
+}
+
+.mongodb {
+  color: #47a248;
+}
+
+.mongodb .tooltip {
+  background: linear-gradient(135deg, #47a248, #69b864);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #skills-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .tooltip-icon {
+    font-size: 28px;
+  }
+
+  .tooltip {
+    font-size: 12px;
+    padding: 8px 12px;
   }
 }
