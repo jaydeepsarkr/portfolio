@@ -49,73 +49,7 @@ html {
   top: -616px;
   z-index: 100;
   left: 157px;
-
-  /* Border Animation */
-  border: 2px solid transparent; /* Transparent border as base */
-  border-image: linear-gradient(
-    45deg,
-    #e74c3c,
-    #8e44ad,
-    #3498db,
-    #2ecc71,
-    #f1c40f
-  );
-  border-image-slice: 1;
-  animation: borderColorAnimation 3s infinite;
-}
-
-/* Keyframes for Border Animation */
-@keyframes borderColorAnimation {
-  0% {
-    border-image-source: linear-gradient(
-      45deg,
-      #e74c3c,
-      #8e44ad,
-      #3498db,
-      #2ecc71,
-      #f1c40f
-    );
-  }
-  25% {
-    border-image-source: linear-gradient(
-      45deg,
-      #3498db,
-      #2ecc71,
-      #f1c40f,
-      #e74c3c,
-      #8e44ad
-    );
-  }
-  50% {
-    border-image-source: linear-gradient(
-      45deg,
-      #2ecc71,
-      #f1c40f,
-      #e74c3c,
-      #8e44ad,
-      #3498db
-    );
-  }
-  75% {
-    border-image-source: linear-gradient(
-      45deg,
-      #f1c40f,
-      #e74c3c,
-      #8e44ad,
-      #3498db,
-      #2ecc71
-    );
-  }
-  100% {
-    border-image-source: linear-gradient(
-      45deg,
-      #e74c3c,
-      #8e44ad,
-      #3498db,
-      #2ecc71,
-      #f1c40f
-    );
-  }
+  border: 1px solid wheat;
 }
 
 #container.show {
@@ -240,7 +174,7 @@ html {
 }
 
 #send-button:hover {
-  background-color: #c0392b;
+  background-color: #3e2bee;
 }
 
 /* Close Icon */
