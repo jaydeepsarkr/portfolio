@@ -11,26 +11,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="font.css" />
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const contactButton = document.getElementById("openContainer");
-        const containerDiv = document.querySelector(".container");
-        const closeButton = document.querySelector(".close-icon");
-
-        // Show the container div with animation
-        contactButton.addEventListener("click", () => {
-          containerDiv.classList.remove("hide");
-          containerDiv.classList.add("show");
-        });
-
-        // Hide the container div with animation
-        closeButton.addEventListener("click", () => {
-          containerDiv.classList.remove("show");
-          containerDiv.classList.add("hide");
-        });
-      });
-    </script>
-
+    <script src="script.js"></script>
     <script src="matter.js" defer></script>
   </head>
   <body class="bg-[#111] text-white font-['nunito']">
@@ -1126,7 +1107,7 @@
           <div class="mb-4">
             <label
               for="name"
-              class="block text-sm font-semibold text-white mb-2"
+              class="block text-sm font-semibold text-[white] mb-2"
               >Name</label
             >
             <div class="relative">
@@ -1134,7 +1115,7 @@
                 type="text"
                 id="name"
                 name="name"
-                class="bg-white text-gray-900 text-sm rounded-lg focus:ring-[#d90023] focus:border-[#d90023] w-full px-4 py-3 transition duration-300 ease-in-out"
+                class="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 w-full px-4 py-3 transition duration-300 ease-in-out"
                 placeholder="Enter your name"
                 required
               />
@@ -1143,7 +1124,7 @@
           <div class="mb-4">
             <label
               for="email"
-              class="block text-sm font-semibold text-white mb-2"
+              class="block text-sm font-semibold text-[white] mb-2"
               >Your Email</label
             >
             <div class="relative">
@@ -1151,7 +1132,7 @@
                 type="email"
                 id="email"
                 name="email"
-                class="bg-white text-gray-900 text-sm rounded-lg focus:ring-[#d90023] focus:border-[#d90023] w-full px-4 py-3 transition duration-300 ease-in-out"
+                class="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 w-full px-4 py-3 transition duration-300 ease-in-out"
                 placeholder="example@gmail.com"
                 required
               />
@@ -1160,21 +1141,21 @@
           <div class="mb-6">
             <label
               for="message"
-              class="block text-sm font-semibold text-white mb-2"
+              class="block text-sm font-semibold text-[white] mb-2"
               >Message</label
             >
             <textarea
               id="message"
               name="message"
               rows="6"
-              class="bg-white bg-opacity-70 border-2 border-[#d90023] text-gray-900 text-sm rounded-lg focus:ring-[#d90023] focus:border-[#d90023] w-full px-4 py-3 transition duration-300 ease-in-out"
+              class="bg-blue-50 border-2 border-blue-400 text-gray-900 text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 w-full px-4 py-3 transition duration-300 ease-in-out"
               placeholder="Your message here..."
               required
             ></textarea>
           </div>
           <button
             type="submit"
-            class="w-full text-white bg-[#d90023] hover:bg-[#c5001d] focus:ring-4 focus:ring-[#b20018] font-medium rounded-lg text-sm px-6 py-3 transition duration-300 ease-in-out transform hover:scale-105"
+            class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 transition duration-300 ease-in-out transform hover:scale-105"
           >
             Send
           </button>
@@ -1326,8 +1307,8 @@
         },
       });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
     <script src="https://cdn/jsdelivr.net/npm/matter-wrap@0.2.0/build/matter-wrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script> -->
   </body>
 </html>
