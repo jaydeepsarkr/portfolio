@@ -1276,6 +1276,10 @@ video {
   font-family: merriweather;
 }
 
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1351,6 +1355,11 @@ video {
   color: rgb(176 178 195 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#e8d89e\] {
+  --tw-text-opacity: 1;
+  color: rgb(232 216 158 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#fc815c\] {
   --tw-text-opacity: 1;
   color: rgb(252 129 92 / var(--tw-text-opacity, 1));
@@ -1388,6 +1397,76 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#554810\] {
+  --tw-text-opacity: 1;
+  color: rgb(85 72 16 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#a08f41\] {
+  --tw-text-opacity: 1;
+  color: rgb(160 143 65 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#e0ce7e\] {
+  --tw-text-opacity: 1;
+  color: rgb(224 206 126 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#84e1f0\] {
+  --tw-text-opacity: 1;
+  color: rgb(132 225 240 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#ff9a8b\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 154 139 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#ffc107\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 193 7 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#ffd54f\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 213 79 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#ffecb3\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 236 179 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#e53935\] {
+  --tw-text-opacity: 1;
+  color: rgb(229 57 53 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#ef5350\] {
+  --tw-text-opacity: 1;
+  color: rgb(239 83 80 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#ffcdd2\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 205 210 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#61b1e6\] {
+  --tw-text-opacity: 1;
+  color: rgb(97 177 230 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#ed8f72\] {
+  --tw-text-opacity: 1;
+  color: rgb(237 143 114 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#8ae3d7\] {
+  --tw-text-opacity: 1;
+  color: rgb(138 227 215 / var(--tw-text-opacity, 1));
 }
 
 .shadow {
@@ -1787,5 +1866,10 @@ video {
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
