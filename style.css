@@ -571,3 +571,89 @@ html {
     padding: 8px 12px;
   }
 }
+.home-logo-wrapper {
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+.home-logo-wrapper.reverse {
+  margin-top: -2rem;
+}
+.clients-grid.logo-animate {
+  grid-column-gap: 3rem;
+  opacity: 1;
+  flex: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  width: 100rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  display: flex;
+}
+.logo-animate {
+  animation: slide 35s infinite linear;
+}
+.clients-grid.logo-animate-alt {
+  grid-column-gap: 3rem;
+  flex: none;
+  width: 100rem;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: auto;
+  display: flex;
+}
+.logo-animate-alt {
+  animation: slidealt 35s infinite linear;
+  animation-direction: reverse;
+}
+/* Animation for the first right to left marquee */
+@keyframes slide {
+  0% {
+    transform: translateX(calc(0% + 50px));
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.logo-animate {
+  animation: slide 35s infinite linear;
+  /* Adjust the seconds for a slower or faster animation */
+}
+
+/* Animation for the second left to right marquee */
+@keyframes slidealt {
+  0% {
+    transform: translateX(calc(0% + 50px));
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.logo-animate-alt {
+  animation: slidealt 35s infinite linear;
+  /* Adjust the seconds for a slower or faster animation */
+  animation-direction: reverse;
+}
