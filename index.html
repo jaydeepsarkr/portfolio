@@ -33,8 +33,41 @@
       src="matter.js"
       defer
     ></script>
+    <style>
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fade-in 1s ease-out forwards;
+      }
+    </style>
   </head>
   <body class="bg-[#111] text-white font-['nunito']">
+    <!-- Loader -->
+    <div
+      id="loader"
+      class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gray-900 transition-opacity duration-700"
+    >
+      <div
+        class="w-20 h-20 border-4 border-gray-700 border-t-cyan-400 rounded-full animate-spin mb-6"
+      ></div>
+      <div
+        id="percentage"
+        class="text-4xl font-semibold text-cyan-400"
+      >
+        1%
+      </div>
+      <p class="mt-4 text-gray-400 text-sm">Preparing your experience...</p>
+    </div>
+
     <section class="flex flex-col justify-between h-screen">
       <header
         class="pointer-events-none z-10 flex items-center justify-between px-4 mt-4 max-w-screen-xl mx-auto w-full"
@@ -2232,5 +2265,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
     <script src="https://cdn/jsdelivr.net/npm/matter-wrap@0.2.0/build/matter-wrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script>
+    <!-- Countdown Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let percent = 1;
+        const loader = document.getElementById("loader");
+        const percentageText = document.getElementById("percentage");
+        const mainContent = document.getElementById("main-content");
+
+        const interval = setInterval(() => {
+          percentageText.textContent = `${percent}%`;
+          percent++;
+
+          if (percent > 100) {
+            clearInterval(interval);
+            loader.classList.add("opacity-0");
+            setTimeout(() => {
+              loader.classList.add("hidden");
+              mainContent.classList.remove("hidden");
+            }, 200);
+          }
+        }, 10); // ~2.5 seconds total
+      });
+    </script>
   </body>
 </html>
