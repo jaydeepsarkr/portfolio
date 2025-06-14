@@ -50,6 +50,8 @@ html {
   z-index: 100;
   left: 157px;
   border: 1px solid wheat;
+      border-top-left-radius: 42px;
+    border-bottom-left-radius: 42px;
 }
 
 #container.show {
@@ -72,6 +74,7 @@ html {
   opacity: 0;
   transform: translateY(100px);
   animation: slideUp 1s forwards;
+  border-radius:40px;
 }
 
 #about-title {
