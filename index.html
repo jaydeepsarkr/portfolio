@@ -2277,7 +2277,7 @@
           percentageText.textContent = `${percent}%`;
           percent++;
 
-          if (percent > 100) {
+          if (percent > 50) {
             clearInterval(interval);
             loader.classList.add("opacity-0");
             setTimeout(() => {
